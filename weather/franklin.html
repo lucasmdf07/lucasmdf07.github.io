@@ -1,62 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Franklin, ID | Weather Info</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Weather info for Franklin, Idaho">
-</head>
-<body>
-<header>
-    <h1>Franklin, ID</h1>
-</header>
 
-<nav>
-    <ul>
-     <li><a href="../index.html" title="Go to home page">Home</a></li>
-    </ul>
- </nav>
-
-<main>
-    <img src="images/plan-images/logo.jpeg">
-    <h1>The Weather Site</h1>
-    
-    <nav>
-            <li><a href="#" title"takes you to the Current search">Current Search</a>
-                <a href="#" title"takes you to Franklin's weather page">  | Franklin, ID</a>
-                <a href="#" title"takes you to Greenville's weather page">| Greenville, SC</a>
-            </li>
-    </nav>
-        <h2>Franklin, Idaho</h2>
-        <p><b>Zip:</b> 83237 | <b>Elevation:</b> 4501 ft. | <b>Location:</b> 42.0135° N, 111.8072° W</p>
-    
-    <div>
-        <p><b>Temperature</b></p>
-        <p>24° F</p>
-        <p>34F 21F</p>
-        <p>Feels Like 21F</p>
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <title>Franklin, ID | Weather Site</title>
+        <meta name="description" content="Current weather conditions in Franklin, ID">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="/weather/css/screen.css" media="screen">
+    </head>
+    <body>
+        <header id="page-header">
+            <p id="site-logo">&#9748;</p>
+            <p class="site-brand">The Weather Site</p>
+        </header>
+            <nav id="page-nav">
+            <ul>
+                <li><a href="#" title="go to current temperature">Current</a></li>
+                <li><a href="#" title="Search for new location">Search</a></li>
+                <li><a href="#" title="go to Franklin, Idaho's weather info">Franklin, ID</a></li>
+                <li><a href="#" title="go to Greenville, South Carolina's weather info">Greenville, SC</a></li>
+            </ul>
+        </nav>
         
-        <p><b>Wind</b></p>
-        <p>2 MPH</p>
-        <p>Direction: NW</p>
-        <p>Gusts: 5mph</p>
-
-        <p><b>Video Forecast</b></p>
-
-        <p><b>Sunny</b><p>
-        
-    </div>
-    
-    <div>
-        <p><b>Hourly Forecast</b></p>
-        <p>12am: 21F | 1am: 21F | 2am: 21F | 3am: 20F | 4am: 20F | 5am: 20F | 6am: 20F | 7am: 21F | 8am: 21 | 9am: 46°F | 10am: 49°F | 11am: 51°F | 12pm: 21F | 1pm: 21F | 2pm: 21F | 3pm: 20F | 4pm: 20F | 5pm: 20F | 6pm: 20F | 7pm: 21F | 8pm: 21 | 9pm: 46°F | 10pm: 49°F | 11pm: 51°F</p>
-    </div>
-</main>
-
-<footer>
-    <p>&copy; 2018 - The Wather Site, Lucas Mayer de Freitas</p>
-</footer>
-    
-</body>
+        <main>
+            <section class="loc-name">
+                <h1>Franklin, Idaho</h1>
+            </section>
+            <section id="loc-info">
+                <p><b>Zip: </b>83237 | <b>Elevation: </b>4968 ft. | <b>Location: </b>42.07, 111.79</p>
+            </section>
+            <section id="temp" class="tile">
+                <header>
+                    <h2>Temperature</h2>
+                </header>
+                <p id="current">55&#8457;</p>
+                <p id="hi">64F</p>
+                <p id="lo">41F</p>
+                <p>Feels Like 53F</p>
+            </section>
+            <section id="wind" class="tile">
+                <header>
+                    <h2>Wind</h2>
+                </header>
+                <img src="/weather/images/placeholder/wind.png" alt="wind direction placeholder">
+                <p><b>Direction: </b> SW</p>
+                <p><b>Gusts: </b>5 mph</p>
+            </section>
+            <section id="summary" class="tile">
+                <header>
+                    <h2>Rain</h2>
+                </header>
+                <img id="img-sum" src="/weather/images/placeholder/rain.svg" alt="rain cloud summary placeholder">
+            </section>
+            <section id="hourly">
+                <header>
+                    <h3>Hourly Forecast</h3>
+                </header>
+                <p>12am: 41F | 1am: 41F | 2am: 41F | 3am: 41F | 4am: 41F | 5am: 41F | 6am: 42F | 7am: 44F | 8am: 44F | 9am: 46F | 10am: 49F | 11am: 51F | 12pm: 55F | 1pm: 58F | 2pm: 62F | 3pm: 64F | 4pm: 64F | 5pm: 62F | 6pm: 61F | 7pm: 60F | 8pm: 59F | 9pm: 58F | 10pm: 52F | 11pm: 48F |</p>
+            </section>
+        </main>
+        <footer id="page-footer">&copy;2018 Weather Site</footer>
+    </body>
 </html>
