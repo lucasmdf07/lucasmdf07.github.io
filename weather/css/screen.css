@@ -1,7 +1,6 @@
 /* CSS for Screened Devices 
 /* 1. Fonts and supplementary style sheets */
 /* 1.1 Normalize */
-@import url('normalize.css');
 
 /* 1.2 Google fonts */
 @import url('https://fonts.googleapis.com/css?family=Sansita');
