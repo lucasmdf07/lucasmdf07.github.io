@@ -1,65 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Franklin, ID | Weather Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Weather info for Franklin, Idaho">
+    <link rel="stylesheet" type="text/css" href="css/screen.css">
+    <script src="js/curentdate.js"></script>
+</head>
 
-<!doctype html>
-<html lang="en-us">
-    <head>
-        <meta charset="UTF-8">
-        <title>Franklin, ID | Weather Site</title>
-        <meta name="description" content="Current weather conditions in Franklin, ID">
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" type="text/css" href="/weather/css/screen.css" media="screen">
-    </head>
-    <body>
-        <header id="page-header">
-            <p id="site-logo">&#9748;</p>
-            <p class="site-brand">The Weather Site</p>
-        </header>
-            <nav id="page-nav">
+<body>
+    <header id="page-header">
+        <p id="site-logo">&#9748;</p>
+        <h1>The Weather Site</h1>
+    </header>
+
+    <nav id="page-nav">
+        <ul>
+            <li><a>Current</a></li>
+            <li><a>Search</a></li>
+            <li><a>Franklin</a></li>
+            <li><a>Greenville</a></li>
+            <li><a>Springfield</a></li>
+        </ul>
+    </nav>
+
+<main>
+    <h1>Franklin, ID</h1>
+    
+    <section id="location">
+            <h3 class="validator">location</h3>
+        <ul>
+                <li id="zip"><strong>Zip:</strong> 83237 |</li>
+                <li id="elevation"><strong>Evelation:</strong> 4501 ft. |</li>
+                <li id="location-lat-long"><strong>Location:</strong> 42.0135° N, 111.8072° W</li>
+        </ul>
+    </section>
+    
+    <div id="border-sections">
+        <section class="border"  id="temperature">
+            <h3 class="hide">Temperature</h3>
+            <p id="temp-real">24° F</p>
+                    
+            <section id="temp-high-low">
+                <h3 class="validator">temp-high-low</h3>
+                <p id="temp-high">34F</p>
+                <p id="temp-low">21F</p>
+              </section>
+            
+            <p id="temp-feels-like">Feels Like 21F</p>
+        </section>
+
+        <section class="border"  id="wind"> 
+            <h3 class="hide">Wind</h3>
+            <p id="wind-speed">2 MPH</p>
+            <p id="wind-direction">Direction: NW</p>
+            <p id="wind-gusts">Gusts: 5mph</p>
+        </section>
+
+        <section class="border" id="video-forecast">
+            <h3 class="hide">Video Forecast</h3>
+            <img id="sky" src="images/plan-images/raindrops.jpg" alt="sky">
+        </section>
+    </div>
+    
+    <section class="border" id="hourly-forecast">
+
+        <h3>Hourly Forecast</h3>
             <ul>
-                <li><a href="#" title="go to current temperature">Current</a></li>
-                <li><a href="#" title="Search for new location">Search</a></li>
-                <li><a href="#" title="go to Franklin, Idaho's weather info">Franklin, ID</a></li>
-                <li><a href="#" title="go to Greenville, South Carolina's weather info">Greenville, SC</a></li>
+                <li>12am: 21F</li>
+                <li>1am: 21F</li>
+                <li>2am: 21F</li>
+                <li>3am: 20F</li>
+                <li>4am: 20F</li>
+                <li>5am: 20F</li>
+                <li>6am: 20F</li>
+                <li>7am: 21F</li>
+                <li>8am: 21F</li>
+                <li>9am: 46F</li>
+                <li>10am: 49F</li>
+                <li>11am: 51F</li>
+                <li>12pm: 21F</li>
+                <li>1pm: 21F</li>
+                <li>2pm: 21F</li>
+                <li>3pm: 20F</li>
+                <li>4pm: 20F</li>
+                <li>5pm: 20F</li>
+                <li>6pm: 20F</li>
+                <li>7pm: 21F</li>
+                <li>8pm: 21F</li>
+                <li>9pm: 46F</li>
+                <li>10pm: 49F</li>
+                <li>11pm: 51F</li>
             </ul>
-        </nav>
-        
-        <main>
-            <section class="loc-name">
-                <h1>Franklin, Idaho</h1>
-            </section>
-            <section id="loc-info">
-                <h2>Franklin, Idaho</h2>
-                <p><b>Zip: </b>83237 | <b>Elevation: </b>4501 ft. | <b>Location: </b>42.0135° N, 111.8072° W</p>
-            </section>
-            <section id="temp" class="tile">
-                <header>
-                    <h2>Temperature</h2>
-                </header>
-                <p id="current">24&#8457;</p>
-                <p id="hi">34F</p>
-                <p id="lo">21F</p>
-                <p>Feels Like 21F</p>
-            </section>
-            <section id="wind" class="tile">
-                <header>
-                    <h2>Wind</h2>
-                </header>
-                <img src="/weather/images/plan-images/wind.png" alt="wind direction placeholder">
-                <p><b>Direction: </b> NW</p>
-                <p><b>Gusts: </b>5 mph</p>
-            </section>
-            <section id="summary" class="tile">
-                <header>
-                    <h2>Rain</h2>
-                </header>
-                <img id="img-sum" src="/weather/images/plan-images/raindrops.jpg" alt="rain cloud summary placeholder">
-            </section>
-            <section id="hourly">
-                <header>
-                    <h3>Hourly Forecast</h3>
-                </header>
-                <p>12am: 41F | 1am: 41F | 2am: 41F | 3am: 41F | 4am: 41F | 5am: 41F | 6am: 42F | 7am: 44F | 8am: 44F | 9am: 46F | 10am: 49F | 11am: 51F | 12pm: 55F | 1pm: 58F | 2pm: 62F | 3pm: 64F | 4pm: 64F | 5pm: 62F | 6pm: 61F | 7pm: 60F | 8pm: 59F | 9pm: 58F | 10pm: 52F | 11pm: 48F |</p>
-            </section>
-        </main>
-        <footer id="page-footer">&copy;2018 Weather Site</footer>
-    </body>
+    </section>
+</main>
+
+<footer id="page-footer">
+    &copy; 2018 &nbsp; | &nbsp; The Weather Site &nbsp; | &nbsp; <span id="date"></span> &nbsp; | &nbsp; <a href=../index.html title="Go to Home Page">Home</a>
+
+    <script src="js/currentdate.js"></script>    
+</footer>
+</body>
 </html>

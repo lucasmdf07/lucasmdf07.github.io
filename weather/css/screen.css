@@ -1,113 +1,194 @@
-/* CSS for Screened Devices 
-/* 1. Fonts and supplementary style sheets */
-/* 1.1 Normalize */
+/* 1. Importing other css file and font */
+/* 1.1 This is importing the normalize.css file */
 
-/* 1.2 Google fonts */
+/* 1.2 This is an imported Google Font */
 @import url('https://fonts.googleapis.com/css?family=Sansita');
 
-
-/* 2. General Rules that apply to all devices */
-html {
-    box-sizing: border-box;
-   }
-   
-   *, *:before, *:after{
-    box-sizing: inherit;
-   }
-
-body{
-    font-family: Helvetica, Verdana, sans-serif;
-    font-size: 20px;
+/* 2. General Styles */
+/* 2.1 Change font type */
+body {
+    font-family: Helvetica, Arial, sans-serif;
 }
-
-h1, h2, h3, h4, h5, h6{
-    font-family: sansita,  sans-serif;
+h1, h2, h3, h4, h5, h6 {
+    font-family: Sansita, sans-serif;
 }
-
-.tile{
-    margin: .2em auto;
-    border: 1px solid;
-    border-radius: 15px;
-    max-width: 60%;
+h3, h4 {
     text-align: center;
 }
 
-  #page-header p{
-      font-size: 2em;
-      font-weight: 600;
-      display: inline;
-  }
+/* 2.2 Take off bullet points and display in row*/
+#page-nav ul {
+    list-style-type: none;
+    /* align-items: center; */
+    display: flex;
+    flex-flow: row nowrap;
+}
+/* 2.3 Nothing - took it out */
+.validator{
+    display:none;
+}
 
-.site-brand {
-    font-style: italic;
-    display: inline;
-  }
-
-nav ul li { 
-    display: inline-block; 
-    list-style: none;
-    font-size: .8em;
-  }
-
-a{
-    text-decoration: none;
-}  
-  #img-sum{
-      max-width: 200px;
-  }
-
-  #loc-info{
-      font-size: .6em;
-  }
-
-  #current{
-      font-size: 4.2em;
-      margin-bottom: .1em;
-      margin-top: .2em;
-  }
-
-  #hi, #lo{
-      display: inline;
-      padding: 5px;
-  }
-
-  #hi{
-      color: red;
-  }
-
-  #lo{
-      color: blue;
-  }
-
-  #wind p{
-      font-size: .6em;
-      line-height: 5px;
-  }
-
-  img{
-      margin-top: .5em;
-  }
-/* 3. Mobile first (specific to small devices) */
-
-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    border: 1px solid;
-    width: 100%;
+/* 2.4 Changed height on logo */
+#site-logo {
     height: 50px;
-  }
+    float: left;
+}
+/* 2.5 Location Bar */
+#location ul{
+    margin-left: -40px;
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    justify-content: space-between;
+    list-style-type: none;
+    font-size: 12px;
+}
+/*
+#location-info ul li {
+    list-style-type: none;
+    font-size: 12px;
+}
+/* 2.6 Added border on sections */
+.border {
+    /*background-color: rgba(200,200,200,6);*/
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 15px;
+}
+/* 2.7 Text align to center on temp and weather sections */
+#temperature{
+    text-align: center;
+}
+#wind {
+    text-align: center;
+}
+/* 2.8 Real Temp sizing */
+#temp-real {
+    font-size: 100px;
+    margin: -5px;
+}
+/* 2.9 Display high and low temp the way they are */
+#temp-high-low {
+    display: flex;
+    /* float: none; */
+    width: 100%;
+}
+#temp-high, #temp-low {
+    text-align: center;
+    margin: 0 auto;
+}
+#temp-high {
+    color: red;
+    margin-right: -30px;
+}
+#temp-low {
+    color: blue;
+}
 
-  footer{
-    margin-bottom: 5em;
-   }
+/* 2.10 Sky image */
+#sky {   
+    width: 90%;
+    padding: 5%;
+}
+/* 2.11 Made hourly forecast to scroll and diplay in a row */
+#hourly-forecast ul{
+    position: relative;
+    height: 80px;
+    overflow-x: auto;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+#hourly-forecast ul li {
+    margin: .25em 0;
+    padding: 0 1em;
+}
 
-   .tile header {
-       display: none;
-   }
+/*scrollbar style*/
+::-webkit-scrollbar {
+    width: 5px;
+}
 
-   #hourly{
-       display: none;
-   }
-/* 4. Large screen styles (media queries) */
+/*scrollbar style*/
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}
+/* 2.12 Added margin to footer */
+footer {
+    margin-bottom: 40px;
+}
+
+/* 3. Mobile Screen */
+@media screen and (max-width: 1000px) {
+/* 3.1 Hide h3 */
+    .hide {
+        display: none;
+    }
+/* 3.2 Move main nav to bottom of page */
+    #page-nav{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        z-index: 1;
+        border: 1px solid; 
+        /* margin-left: 0px; 
+        padding-left: 0px; */
+    }
+    #page-nav ul {
+        height: 0px;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+/* 3.3 sections size and position */
+    .border {
+        margin-right: 70px;
+        margin-left: 70px;
+        margin-bottom: 7px;
+        min-width: 250px;
+        max-width: 400px;
+    }
+}
+
+/* 4. Larger Screen */
+@media screen and (min-width: 1000px) {
+    body{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    #page-nav ul {
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        border: 1px solid;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #location ul{
+        width: 600px;
+        justify-content: space-between;
+    }
+    .border {
+        width: 300px;
+    }
+    #border-sections {
+        margin-top: 30px;
+        display: flex;
+    }
+    #hourly-forecast {
+        margin-top: 30px;
+        width: 100%;
+        max-width: 1500px;
+    }
+}
+/* 
+#wind-speed {
+    border: 1px solid;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+} */
