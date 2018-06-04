@@ -85,10 +85,16 @@ h3, h4 {
     color: blue;
 }
 
-/* 2.10 Sky image */
-#sky {   
-    width: 90%;
-    padding: 5%;
+#wind-image{
+    width: auto;    
+    padding: 3% 15% 3% 15%;
+}
+
+/* 2.10 Video image */
+#video {  
+    width: 50%;
+    padding: 3% 25% 3% 25%;
+    bottom: 0;
 }
 /* 2.11 Made hourly forecast to scroll and diplay in a row */
 #hourly-forecast ul{
