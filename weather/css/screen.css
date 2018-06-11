@@ -1,11 +1,5 @@
-/* 1. Importing other css file and font */
-/* 1.1 This is importing the normalize.css file */
-
-/* 1.2 This is an imported Google Font */
 @import url('https://fonts.googleapis.com/css?family=Sansita');
 
-/* 2. General Styles */
-/* 2.1 Change font type */
 body {
     font-family: Helvetica, Arial, sans-serif;
 }
@@ -16,25 +10,23 @@ h3, h4 {
     text-align: center;
 }
 
-/* 2.2 Take off bullet points and display in row*/
 #page-nav ul {
     list-style-type: none;
-    /* align-items: center; */
     display: flex;
     flex-flow: row nowrap;
 }
-/* 2.3 Nothing - took it out */
+
 .validator{
     display:none;
 }
 
-/* 2.4 Changed height on logo */
+
 #site-logo {
     height: 10px;
     float: left;
     font-size: 40px;
 }
-/* 2.5 Location Bar */
+
 #location ul{
     margin-left: -40px;
     display: flex;
@@ -44,34 +36,27 @@ h3, h4 {
     list-style-type: none;
     font-size: 12px;
 }
-/*
-#location-info ul li {
-    list-style-type: none;
-    font-size: 12px;
-}
-/* 2.6 Added border on sections */
+
 .border {
-    /*background-color: rgba(200,200,200,6);*/
     margin: .2em auto;
     border: 1px solid;
     border-radius: 15px;
 }
-/* 2.7 Text align to center on temp and weather sections */
+
 #temperature{
     text-align: center;
 }
 #wind {
     text-align: center;
 }
-/* 2.8 Real Temp sizing */
+
 #temp-real {
     font-size: 100px;
     margin: -5px;
 }
-/* 2.9 Display high and low temp the way they are */
+
 #temp-high-low {
     display: flex;
-    /* float: none; */
     width: 100%;
 }
 #temp-high, #temp-low {
@@ -91,13 +76,19 @@ h3, h4 {
     padding: 3% 15% 3% 15%;
 }
 
-/* 2.10 Video image */
+
 #video {  
     width: 50%;
     padding: 3% 25% 3% 25%;
     bottom: 0;
 }
-/* 2.11 Made hourly forecast to scroll and diplay in a row */
+
+#video-image{
+    width: 90%;
+    padding: 5%;
+    
+}
+
 #hourly-forecast ul{
     position: relative;
     height: 80px;
@@ -112,28 +103,32 @@ h3, h4 {
     padding: 0 1em;
 }
 
-/*scrollbar style*/
+
 ::-webkit-scrollbar {
     width: 5px;
 }
 
-/*scrollbar style*/
+
 ::-webkit-scrollbar-thumb {
     background: gray;
     border-radius: 10px;
 }
-/* 2.12 Added margin to footer */
+
 footer {
     margin-bottom: 40px;
 }
 
-/* 3. Mobile Screen */
+/* Mobile Screen */
 @media screen and (max-width: 1000px) {
-/* 3.1 Hide h3 */
+
     .hide {
         display: none;
     }
-/* 3.2 Move main nav to bottom of page */
+    
+    #video {
+        display: none;
+    }
+
     #page-nav{
         position: fixed;
         bottom: 0;
@@ -142,8 +137,6 @@ footer {
         background-color: white;
         z-index: 1;
         border: 1px solid; 
-        /* margin-left: 0px; 
-        padding-left: 0px; */
     }
     #page-nav ul {
         height: 0px;
@@ -151,7 +144,7 @@ footer {
         justify-content: space-around;
     }
     
-/* 3.3 sections size and position */
+
     .border {
         margin-right: 70px;
         margin-left: 70px;
@@ -161,8 +154,16 @@ footer {
     }
 }
 
-/* 4. Larger Screen */
+/* Large Screen */
 @media screen and (min-width: 1000px) {
+     .hide1 {
+        display: none;
+    }
+    
+    #video-image{
+        display: none;
+    }
+    
     body{
         margin-left: 50px;
         margin-right: 50px;
@@ -192,10 +193,3 @@ footer {
         max-width: 1500px;
     }
 }
-/* 
-#wind-speed {
-    border: 1px solid;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-} */
