@@ -1,0 +1,15 @@
+.large {
+    display: none;
+}
+
+.image_size {
+    width: 90%;
+}
+@media screen and (min-width: 700px) {
+    .large {
+        display: inherit;
+    }
+    .small {
+        display: none;
+    }
+}

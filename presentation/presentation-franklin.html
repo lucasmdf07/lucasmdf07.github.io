@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Franklin, ID | Weather Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Weather info for Franklin, Idaho">
+    <link rel="stylesheet" type="text/css" href="css-presentation.css">
+    <script src="../js/currentdate.js"></script>
+    <style type="text/css">
+    
+        </style>
+    
+</head>
+
+<body>
+    <header id="page-header">
+        <span id="site-logo">&#9748;</span>
+        <h1>The Weather Site</h1>
+    </header>
+
+    <nav id="page-nav">
+        <ul>
+            <li><a>Current</a></li>
+            <li><a>Search</a></li>
+            <li><a href="franklin.html" text="Franklin, ID">Franklin</a></li>
+            <li><a href="greenville.html" text="Greenville, SC">Greenville</a></li>
+        </ul>
+    </nav>
+
+<main>
+    <h1>Franklin, ID</h1>
+    
+    <section id="location">
+            <h3 class="validator">location</h3>
+        <ul>
+                <li id="zip"><strong>Zip:</strong> 83237 |</li>
+                <li id="elevation"><strong>Evelation:</strong> 4501 ft. |</li>
+                <li id="location-lat-long"><strong>Location:</strong> 42.0135° N, 111.8072° W</li>
+        </ul>
+    </section>
+    
+    <div id="border-sections">
+        
+        <section class="border" id=byui>
+            <a target="_blank" href="//byui.edu">
+            <picture>
+                <source media="(min-width: 950px)" srcset="images/byui2.jpg">
+                <source media="(min-width: 665px)" srcset="images/byui3.png" style="width:10%;">
+            
+                <img src="images/byui3.jpg" alt="img" style="width:auto;">
+            </picture>
+                </a>
+        </section>
+                 
+        
+        <section class="border"  id="temperature">
+            <h3 class="hide">Temperature</h3>
+            <p id="temp-real">24° F</p>
+                    
+            <section id="temp-high-low">
+                <h3 class="validator">temp-high-low</h3>
+                <p id="temp-high">34F</p>
+                <p id="temp-low">21F</p>
+              </section>
+            
+            <p id="temp-feels-like">Feels Like 21F</p>
+        </section>
+
+        <section class="border"  id="wind"> 
+            <h3 class="hide">Wind</h3>
+            <img id="wind-image" src="../images/plan-images/wind-franklin.png" alt="wind">
+            <p id="wind-direction">Direction: NW</p>
+            <p id="wind-gusts">Gusts: 5mph</p>
+        </section>
+
+        <section class="border" id="video-forecast">
+            <h3 class="hide">Video Forecast</h3>
+            <h3 class="hide1">Rain  </h3>
+            <img id="video" src="../images/plan-images/video-forecast.png" alt="video">
+            <img id="video-image" src="../images/plan-images/raindrops.jpg" alt="video">
+        </section>
+    </div>
+    
+    <section class="border" id="hourly-forecast">
+
+        <h3>Hourly Forecast</h3>
+            <ul>
+                <li>12am: 21F</li>
+                <li>1am: 21F</li>
+                <li>2am: 21F</li>
+                <li>3am: 20F</li>
+                <li>4am: 20F</li>
+                <li>5am: 20F</li>
+                <li>6am: 20F</li>
+                <li>7am: 21F</li>
+                <li>8am: 21F</li>
+                <li>9am: 46F</li>
+                <li>10am: 49F</li>
+                <li>11am: 51F</li>
+                <li>12pm: 21F</li>
+                <li>1pm: 21F</li>
+                <li>2pm: 21F</li>
+                <li>3pm: 20F</li>
+                <li>4pm: 20F</li>
+                <li>5pm: 20F</li>
+                <li>6pm: 20F</li>
+                <li>7pm: 21F</li>
+                <li>8pm: 21F</li>
+                <li>9pm: 46F</li>
+                <li>10pm: 49F</li>
+                <li>11pm: 51F</li>
+            </ul>
+    </section>
+</main>
+
+<footer id="page-footer">
+    &copy; 2018 &nbsp; | &nbsp; The Weather Site &nbsp; | &nbsp; <span id="date"></span> &nbsp; | &nbsp; <a href=../index.html title="Go to Home Page">Home</a>
+
+    <script src="../js/currentdate.js"></script>    
+</footer>
+</body>
+</html>

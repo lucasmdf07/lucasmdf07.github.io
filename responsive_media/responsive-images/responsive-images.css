@@ -1,0 +1,44 @@
+/* small screen */
+@media only screen and (min-width: 0em ) and (max-width: 799px) {
+    #small {
+        display: block;
+    }
+    
+    #medium {
+        display: none;
+    }
+    
+    #large {
+        display: none;
+    }
+}
+
+/* medium screen */
+@media only screen and (min-width: 800px ) and (max-width: 1199px) {
+    #small {
+        display: none;
+    }
+    
+    #medium {
+        display: block;
+    }
+    
+    #large {
+        display: none;
+    }
+}
+
+/* large screen */
+@media screen and (min-width: 1200px) {
+    #small {
+        display: none;
+    }
+    
+    #medium {
+        display: none;
+    }
+    
+    #large {
+        display: block;
+    }
+}
