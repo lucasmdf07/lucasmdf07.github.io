@@ -118,6 +118,51 @@ footer {
     margin-bottom: 40px;
 }
 
+#dial {
+ height: 150px;
+ width: 150px;
+ background: no-repeat center/85% url('../images/wind-pointer.png');
+ z-index: 100;
+ margin: -.6em auto 0;
+}
+
+#wind-speed {
+    margin-top: -90px;
+    margin-bottom: 100px;
+}
+
+.n {
+    transform: rotate(0deg);
+}
+
+.ne {
+    transform: rotate(45deg);
+}
+
+.e {
+    transform: rotate(90deg);
+}
+
+.se {
+    transform: rotate(135deg);
+}
+
+.s {
+    transform: rotate(180deg);
+}
+
+.sw {
+    transform: rotate(225deg);
+}
+
+.w {
+    transform: rotate(270deg);
+}
+
+.nw {
+    transform: rotate(315deg);
+
+}
 /* Mobile Screen */
 @media screen and (max-width: 1000px) {
 
@@ -152,6 +197,28 @@ footer {
         min-width: 250px;
         max-width: 400px;
     }
+    
+    .clear {
+        background-image: url("../images/clear_400.jpg");
+    }
+        
+    .cloudy {
+        background-image: url("../images/clouds_400.jpg");
+    }
+
+    .foggy {
+        background-image: url("../images/fog_400.jpg");
+    }
+
+    .rainy {
+        background-image: url("../images/rain_400.jpg");
+    }
+
+    .snowy {
+        background-image: url("../images/snow_400.jpg");
+    }
+    
+    
 }
 
 /* Large Screen */
@@ -183,13 +250,36 @@ footer {
     .border {
         width: 300px;
     }
-    #border-sections {
+    #curWeather {
         margin-top: 30px;
         display: flex;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     #hourly-forecast {
         margin-top: 30px;
         width: 100%;
         max-width: 1500px;
     }
+    
+    .clear {
+        background-image: url("../images/clear_1200.jpg");
+    }
+        
+    .cloudy {
+        background-image: url("../images/clouds_1200.jpg");
+    }
+
+    .foggy {
+        background-image: url("../images/fog_1200.jpg");
+    }
+
+    .rainy {
+        background-image: url("../images/rain_1200.jpg");
+    }
+
+    .snowy {
+        background-image: url("../images/snow_1200.jpg");
+    }
+     
 }

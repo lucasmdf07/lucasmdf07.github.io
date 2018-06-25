@@ -37,7 +37,7 @@
         </ul>
     </section>
     
-    <div id="border-sections">
+    <div id="curWeather">
         <section class="border"  id="temperature">
             <h3 class="hide">Temperature</h3>
             <p id="temp-real">24° F</p>
@@ -48,12 +48,13 @@
                 <p id="temp-low">21F</p>
               </section>
             
-            <p id="temp-feels-like">Feels Like 21F</p>
+            <p id="feelTemp">??</p>
         </section>
 
         <section class="border"  id="wind"> 
             <h3 class="hide">Wind</h3>
-            <img id="wind-image" src="images/plan-images/wind-franklin.png" alt="wind">
+            <div id="dial" class="w"></div>
+            <p id="wind-speed">5 mph</p>
             <p id="wind-direction">Direction: NW</p>
             <p id="wind-gusts">Gusts: 5mph</p>
         </section>
@@ -61,8 +62,8 @@
         <section class="border" id="video-forecast">
             <h3 class="hide">Video Forecast</h3>
             <h3 class="hide1">Rain  </h3>
-            <img id="video" src="images/plan-images/video.png" alt="video">
-            <img id="video-image" src="images/plan-images/raindrops.jpg" alt="video">
+            <img id="video" src="images/video.png" alt="video">
+            
         </section>
     </div>
     
@@ -101,7 +102,8 @@
 <footer id="page-footer">
     &copy; 2018 &nbsp; | &nbsp; The Weather Site &nbsp; | &nbsp; <span id="date"></span> &nbsp; | &nbsp; <a href=../index.html title="Go to Home Page">Home</a>
 
-    <script src="js/currentdate.js"></script>    
+    <script src="js/currentdate.js"></script>
 </footer>
+    <script src="js/functions.js"></script>
 </body>
 </html>
