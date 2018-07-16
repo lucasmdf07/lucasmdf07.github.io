@@ -5,86 +5,99 @@
     <title>Franklin, ID | Weather Info</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" contentv"Weather info for Franklin, Idaho">
-    <link rel="stylesheet" type="text/css" href="current/screen.css">
+    <meta name="description" content="Weather info for Franklin, Idaho">
+    <link rel="stylesheet" type="text/css" href="css/screen.css">
     <script src="js/curentdate.js"></script>
 </head>
 
-<body id="content">
-    <header>
-        <span id="logo">&#9748;</span>
+<body>
+    <header id="page-header">
+        <span id="site-logo">&#9748;</span>
         <h1>The Weather Site</h1>
     </header>
-    <nav id="main-nav">
+
+    <nav id="page-nav">
         <ul>
-            <li><a href="index.html">Current</a></li>
-            <li id="right-border"><a>Search</a></li>
-            <li><a href="franklin.html">Franklin, ID</a></li>
-            <li><a href="greenville.html">Greenville, SC</a></li>
+            <li><a href="index.html" alt="Current Location">Current</a></li>
+            <li><a>Search</a></li>
+            <li><a href="franklin.html" alt="Franklin, ID">Franklin</a></li>
+            <li><a href="greenville.html" alt="Greenville, SC">Greenville</a></li>
         </ul>
     </nav>
-    <main>
-        <h1>Franklin, ID</h1>
-        <section id="location-info">
-            <ul>
-                <li id="zip"><strong>Zip:</strong> 83237 </li>
-                <li id="elevation"><strong>Evelation:</strong> 4968 ft. </li>
-                <li id="location"><strong>Location:</strong> 42.07, 111.79</li>
-            </ul>
+
+<main>
+    <h1>Franklin, ID</h1>
+    
+    <section id="location">
+            <h3 class="validator">location</h3>
+        <ul>
+                <li id="zip"><strong>Zip:</strong> 83237 |</li>
+                <li id="elevation"><strong>Evelation:</strong> 4501 ft. |</li>
+                <li id="location-lat-long"><strong>Location:</strong> 42.0135° N, 111.8072° W</li>
+        </ul>
+    </section>
+    
+    <div id="curWeather">
+        <section class="border"  id="temperature">
+            <h3 class="hide">Temperature</h3>
+            <p id="temp-real">24° F</p>
+                    
+            <section id="temp-high-low">
+                <h3 class="validator">temp-high-low</h3>
+                <p id="temp-high">34F</p>
+                <p id="temp-low">21F</p>
+              </section>
+            
+            <p id="feelTemp">??</p>
         </section>
-        <div id="sections">
-            <section class="border" id="temp">
-                    <h3 class="hide">Temperature</h3>
-                    <p id="real-temp">45&#176;F</p>
-                    <section id="high-low">
-                        <p id="high-temp" title="high">64&#176;F</p>
-                        <p id="low-temp" title="low">41&#176;F</p>
-                    </section>
-                    <p id="realFeelTemp">??</p>
-            </section>
-            <section class="border" id="wind">
-                    <h3 class="hide">Wind</h3>
-                    <p>N</p>
-                    <img id="windPointerImg" src="current/images/wind-pointer.png" alt="wind pointer image">
-                    <p id="wind-speed">5 mph</p>
-                    <p id="wind-direction"><strong>Direction:</strong> SW</p>
-                    <p id="wind-gusts"><strong>Gusts:</strong> 5 mph</p>
-            </section>
-            <section class="border" id="sky">
-                <h3>Rain</h3>
-                <img id="weatherVideo" src="current/images/video.png" alt="rainy window">
-            </section>
-        </div>
-        <section class="border" id="hourly-forecast">
-            <h4>Hourly Forecast</h4>
+
+        <section class="border"  id="wind"> 
+            <h3 class="hide">Wind</h3>
+            <div id="dial" class="w"></div>
+            <p id="wind-speed">5 mph</p>
+            <p id="wind-direction">Direction: NW</p>
+            <p id="wind-gusts">Gusts: 5mph</p>
+        </section>
+
+        <section class="border" id="video-forecast">
+            <h3 class="hide">Video Forecast</h3>
+            <h3 class="hide1">Rain  </h3>
+            <img id="video" src="images/video.png" alt="video">
+            
+        </section>
+    </div>
+    
+    <section class="border" id="hourly-forecast">
+
+        <h3>Hourly Forecast</h3>
             <ul>
-                <li>12am: 41F</li>
-                <li>1am: 41F</li>
-                <li>2am: 41F</li>
-                <li>3am: 41F</li>
-                <li>4am: 41F</li>
-                <li>5am: 41F</li>
-                <li>6am: 42F</li>
-                <li>7am: 44F</li>
-                <li>8am: 44F</li>
+                <li>12am: 21F</li>
+                <li>1am: 21F</li>
+                <li>2am: 21F</li>
+                <li>3am: 20F</li>
+                <li>4am: 20F</li>
+                <li>5am: 20F</li>
+                <li>6am: 20F</li>
+                <li>7am: 21F</li>
+                <li>8am: 21F</li>
                 <li>9am: 46F</li>
                 <li>10am: 49F</li>
                 <li>11am: 51F</li>
-                <li>12pm: 55F</li>
-                <li>1pm: 58F</li>
-                <li>2pm: 62F</li>
-                <li>3pm: 64F</li>
-                <li>4pm: 64F</li>
-                <li>5pm: 62F</li>
-                <li>6pm: 61F</li>
-                <li>7pm: 60F</li>
-                <li>8pm: 59F</li>
-                <li>9pm: 58F</li>
-                <li>10pm: 52F</li>
-                <li>11pm: 48F</li>
+                <li>12pm: 21F</li>
+                <li>1pm: 21F</li>
+                <li>2pm: 21F</li>
+                <li>3pm: 20F</li>
+                <li>4pm: 20F</li>
+                <li>5pm: 20F</li>
+                <li>6pm: 20F</li>
+                <li>7pm: 21F</li>
+                <li>8pm: 21F</li>
+                <li>9pm: 46F</li>
+                <li>10pm: 49F</li>
+                <li>11pm: 51F</li>
             </ul>
-        </section>
-    </main>
+    </section>
+</main>
 
 <footer id="page-footer">
     &copy; 2018 &nbsp; | &nbsp; The Weather Site &nbsp; | &nbsp; <span id="date"></span> &nbsp; | &nbsp; <a href=../index.html title="Go to Home Page">Home</a>
