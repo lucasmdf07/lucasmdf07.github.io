@@ -40,8 +40,6 @@ getData(key);
 
 });
 
-
-
 function getData(key) {
 
     const product = document.getElementById("product");
@@ -77,23 +75,5 @@ function getData(key) {
     }
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 navBar()

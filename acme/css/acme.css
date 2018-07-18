@@ -1,12 +1,7 @@
 @import url('normalize.css');
 
-
-
 @import url('https://fonts.googleapis.com/css?family=Acme');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
-
-
 
 
 html{
@@ -32,7 +27,6 @@ body{
 h1, h3, h4, h5, h6{
     font-family: 'Acme',  sans-serif;
     color: #2C2C2C;
-
     }
 
 h1{
@@ -58,10 +52,6 @@ main{
 .show{
     display: block;
     }
-
-
-
-
 
 nav{
     background-color: #de2226;
@@ -173,7 +163,6 @@ footer{
     margin: 5px 0;
 }
 
-
 #site-logo{
     margin: 15px 0 0 15px;
     max-width: 90%;
@@ -187,10 +176,7 @@ main{
     margin: 0 15px;
 }
 
-
-
 @media only screen AND (min-width: 768px){
-
 
 
     #site-logo{
@@ -212,9 +198,6 @@ main{
         margin: 0 45px;
         }    
 
-
-
-
     nav {
         position: relative;
         /* width: 80%; */
@@ -228,6 +211,4 @@ main{
     nav li{
         padding: 15px 0px 15px 45px
         }
-
-    
     }
