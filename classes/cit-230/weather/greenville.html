@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Greenville, SC | Weather Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Weather info for Greenville, SC">
+    <link rel="stylesheet" type="text/css" href="css/screen.css">
+    <script src="js/curentdate.js"></script>
+</head>
+
+<body>
+    <header id="page-header">
+        <span id="site-logo">&#9748;</span>
+        <h1>The Weather Site</h1>
+    </header>
+
+    <nav id="page-nav">
+        <ul>
+            <li><a>Current</a></li>
+            <li><a>Search</a></li>
+            <li><a href="franklin.html" alt="Franklin, ID">Franklin</a></li>
+            <li><a href="greenville.html" alt="Greenville, SC">Greenville</a></li>
+        </ul>
+    </nav>
+
+<main>
+    <h1>Greenville, SC</h1>
+    
+    <section id="location">
+            <h3 class="validator">location</h3>
+        <ul>
+                <li id="zip"><strong>Zip:</strong> 29601 |</li>
+                <li id="elevation"><strong>Evelation:</strong> 966 ft. |</li>
+                <li id="location-lat-long"><strong>Location:</strong> 34.85° N, -82.4° W</li>
+        </ul>
+    </section>
+    
+    <div id="border-sections">
+        <section class="border"  id="temperature">
+            <h3 class="hide">Temperature</h3>
+            <p id="temp-real">65° F</p>
+                    
+            <section id="temp-high-low">
+                <h3 class="validator">temp-high-low</h3>
+                <p id="temp-high">72F</p>
+                <p id="temp-low">51F</p>
+              </section>
+            
+            <p id="temp-feels-like">Feels Like 21F</p>
+        </section>
+
+        <section class="border"  id="wind"> 
+            <h3 class="hide">Wind</h3>
+            <img id="wind-image" src="images/plan-images/wind-greenville.png" alt="wind">
+            <p id="wind-direction">Direction: SW</p>
+            <p id="wind-gusts">Gusts: 8mph</p>
+        </section>
+
+        <section class="border" id="video-forecast">
+            <h3 class="hide">Video Forecast</h3>
+            <h3 class="hide1">Thunderstorms</h3>
+            <img id="video" src="images/plan-images/video.png" alt="video">
+            <img id="video-image" src="images/plan-images/raindrops.jpg" alt="video">
+        </section>
+    </div>
+    
+    <section class="border" id="hourly-forecast">
+
+        <h3>Hourly Forecast</h3>
+            <ul>
+                <li>12am: 55F</li>
+                <li>1am: 55F</li>
+                <li>2am: 561F</li>
+                <li>3am: 57F</li>
+                <li>4am: 57F</li>
+                <li>5am: 57F</li>
+                <li>6am: 59F</li>
+                <li>7am: 59F</li>
+                <li>8am: 59F</li>
+                <li>9am: 60F</li>
+                <li>10am: 61F</li>
+                <li>11am: 63F</li>
+                <li>12pm: 64F</li>
+                <li>1pm: 64</li>
+                <li>2pm: 66F</li>
+                <li>3pm: 69F</li>
+                <li>4pm: 71F</li>
+                <li>5pm: 72F</li>
+                <li>6pm: 71F</li>
+                <li>7pm: 61F</li>
+                <li>8pm: 57F</li>
+                <li>9pm: 55F</li>
+                <li>10pm: 52F</li>
+                <li>11pm: 51F</li>
+            </ul>
+    </section>
+</main>
+
+<footer id="page-footer">
+    &copy; 2018 &nbsp; | &nbsp; The Weather Site &nbsp; | &nbsp; <span id="date"></span> &nbsp; | &nbsp; <a href=../index.html title="Go to Home Page">Home</a>
+
+    <script src="js/currentdate.js"></script>    
+</footer>
+</body>
+</html>
