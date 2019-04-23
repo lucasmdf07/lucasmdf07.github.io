@@ -10,6 +10,23 @@
      ul {
          list-style-type: none;
      }
+          #pa1{
+         background-color: yellow;
+     }
+     header{
+  overflow: hidden;
+  background-color: whitesmoke;
+  position: fixed;
+  top: 0;
+  width: 100%;
+     }
+     
+     .main {
+  padding: 16px;
+  margin-top: 45px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+     
 </style>
      
 <script>
@@ -63,9 +80,12 @@ Programming Assignment 3
 -->
  </head>
  <body>
+  <header>
  <p><a href="../cit160.html">back</a></p>
-  <header>Chapter 04</header>
+      <p>Chapter 04</p>
+      </header>
   <nav></nav>
+     <div class="main">
   <main>
    <h1></h1>      
    <h2>Review Questions</h2>
@@ -147,44 +167,46 @@ Include the surrounding less than (<) and greater than (>) symbols and necessary
 ***************************************************************
 <!-- Programming Assignment 03 -->
       <p>3. Create and validate a well formed HTML 5 document that you can use as a template for future assignments. At a minimum, your template must contain all the tags that are required in an HTML 5 document as explained in Chapter 3 of the textbook in the “Required Tags” section. In addition, your template must contain an opening script tag, a closing script tag, at least one input tag, an opening button tag, a closing button tag, an opening div tag, and a closing div tag.</p>
-
+..........................................................................................................................<br>
+<div id="pa1">
 <p>&lt;!DOCTYPE HTML></br>
 &lt;html lang="en-us"></br>
 &lt;head></br>
 &lt;meta charset="utf-8"></br>
-&lt;title>A Program to Say Hello&lt;/title></br></br>
+&lt;title>A Program to Say Hello&lt;/title></br></br><ul>
 &lt;script></br></br>
 /* Defining Table</br>
  * Input: A person's name</br>
  * Processing: Create a greeting for that person</br>
  * Output: The greeting</br>
  */</br></br>
-function <b>example()</b> {</br>
-    // This line prompts the user to type in his name.</br>
+function <b>example()</b> {</br><ul>
+    <b>// This line prompts the user to type in his name.</br></b>
     var name = prompt("Please enter your name");</br>
 </br>
-    // Create a personalized greeting for the user.</br>
+    <b>// Create a personalized greeting for the user.</br></b>
     var greeting = "Hi " + name + ".  You are superb!";</br>
 </br>
-    // The next line causes the computer to display</br>
-    // a greeting to the user in a popup window.</br>
-    alert(greeting);</br>
+    <b>// The next line causes the computer to display</br>
+    // a greeting to the user in a popup window.</br></b>
+    alert(greeting);</br></ul>
 }</br>
-&lt;/script></br>
+&lt;/script></br></ul>
 &lt;/head></br></br>
 
-&lt;body></br>                                   
-    &lt;button type="button" onclick="<b>example()</b>">Click here</button></br>
+&lt;body></br><ul>                                   
+    &lt;button type="button" onclick="<b>example()</b>">Click here</button></br></ul>
 &lt;/body></br></br>
 &lt;/html></br>
 
 </p>
-
-
+</div>
+..........................................................................................................................<br>
 ***************************************************************
   </main>
   <footer>
    <p>&copy; Lucas Mayer de Freitas, (05/05/2018)</p>
   </footer>
+</div>
  </body>
 </html>

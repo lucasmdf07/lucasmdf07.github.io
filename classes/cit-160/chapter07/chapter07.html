@@ -10,6 +10,12 @@
      ul {
          list-style-type: none;
      }
+               #pa1{
+         background-color: yellow;
+     }
+                    #pa2{
+         background-color: yellow;
+     }
 </style>
      
 <script>
@@ -22,39 +28,85 @@
 Programming Assignment 1
 ***********************/
 
-    function computeSize(){
-        var quarters = document.getElementById('quarters').value;
-        
-        quarters = parseFloat(quarters);
+ function calculate(){
             
-        liters = quarters * 0.946353;
+            var amount = parseFloat(document.getElementById("subtotal").value);
+            
+            var m = amount*1.06;
+            
+            
+            var day = new Date().getDay();
+            if (day == 2 || day == 3){
+                if(amount >50){
+                    m = (amount*0.9)*1.06;
+                }
                 
-        document.getElementById('response').innerHTML = liters;
-                
+            }          
+            
+            document.getElementById('output').innerHTML = "$" + m + " dollars";
+}
+    
+function displayDay(){
+    var day = new Date().getDay();
+    var displayDayOfTheWeek = 0;
+    
+        if (day== 0){
+        displayDayOfTheWeek = "Sunday";
     }
+        else if (day== 1){
+        displayDayOfTheWeek = "Monday";
+    }
+        else if (day== 2){
+        displayDayOfTheWeek = "Tuesday (Discount Day!!!)";
+    }
+        else if (day== 3){
+        displayDayOfTheWeek = "Wednesday (Discount Day!!!)";
+    }
+        else if (day== 4){
+        displayDayOfTheWeek = "Thursday";
+    }
+        else if (day== 5){
+        displayDayOfTheWeek = "Friday";
+    }
+        else if (day== 6){
+        displayDayOfTheWeek = "Saturday";
+    }
+    
+    document.getElementById('messageDay').innerHTML = displayDayOfTheWeek;
+}
          
 /**********************
 Programming Assignment 2
 ***********************/
-        /*
-        input: beg odo, end odo, gallons
-        processing:calculate mpg
-        output: mpg
-        */
-        
-        function mpg(){
+     function checkDate(){
             
-        var b = parseFloat(document.getElementById('b').value);
-        
-        var e = parseFloat(document.getElementById('e').value);
+  var now = new Date();
+            var month = now.getMonth();
+            var dayOfMonth = now.getDate();
+            var dayOfWeek = now.getDay();
+            var year = now.getYear() + 1900;
+             var display = month + "/" + dayOfMonth + "/" + year;
             
-        var g = parseFloat(document.getElementById('g').value);
-        
-        var m = (e-b)/g;
-        
-        document.getElementById('output').innerHTML = m;
-                        
-        }         
+            var m = "Get up!";
+            
+            if (dayOfWeek == 6 || dayOfWeek == 0){
+                    m = "Sleep in.";
+                }
+                
+            else if(dayOfMonth == 1 || month == 0){
+                    m = "Sleep in.";
+                }
+            
+            else if(dayOfMonth == 4 || month == 6){
+                    m = "Sleep in.";
+                }
+            
+            else if(dayOfMonth == 25 || month == 11){
+                    m = "Sleep in.";
+                }
+            
+            document.getElementById('output2').innerHTML = m + " " + "Today: " + display;
+}
 /**********************
 Programming Assignment 3
 ***********************/
@@ -143,13 +195,58 @@ if (!(x == 4 || y < 0))
       
       <p>If you use the above code, the variable dayOfWeek will hold 0 if today is Sunday, 1 if today is Monday, and so on to 6 if today is Saturday.</p>
 
-<h3>How Many Square Feet?</h3>
-<p>
-    Quarters <input type="text" id="quarters"><br>
-    
-    <button type='button' onClick='computeSize()'>Compute Size</button><br>
-    Liters <div id="response"></div>
-</p>
+    <div>
+        <h3>Amount Spent</h3>
+        <input type='text' id='subtotal'>
+        <div id="output"></div><br>
+        <p><b>Day of the Week: <div id="messageDay"></div></b></p>
+        <button type='button' onClick='calculate(), displayDay()'>calculate total</button>
+    </div>
+
+..........................................................................................................................<br>
+  <div id="pa1">
+   
+      
+&lt;!DOCTYPE html><br>
+&lt;html lang="en"><br>
+&lt;head><br>
+    &lt;meta charset="UTF-8"><br>
+    &lt;title>My First Program</title><br>
+    <ul>
+    &lt;script><br><ul>
+        function calculate(){<br><br>
+            
+            var amount = parseFloat(document.getElementById("subtotal").value);<br>
+            
+            var m = amount*1.06;<br>
+            
+            
+            var day = new Date().getDay();<br><br>
+            if (day == 2 || day == 3){<br><ul>
+                if(amount >50){<br><ul>
+                    m = (amount*0.9)*1.06;<br></ul>
+                }<br><br></ul>
+                
+            }          <br><br>
+            
+            document.getElementById('output').innerHTML = m;<br></ul>
+}<br>
+    &lt;/script><br></ul>
+&lt;/head><br><br>
+
+&lt;body><br><ul>
+    &lt;div><br><ul>
+        &lt;input type='text' id='subtotal'><br>
+        &lt;div id="output">&lt;/div><br>
+        &lt;button type='button' onClick='calculate()'>calculate total&lt;/button><br></ul>
+    &lt;/div><br></ul>
+&lt;/body> <br>      
+&lt;/html><br>
+
+ </div>
+     ..........................................................................................................................<br>
+
+      
 ***************************************************************
 <!-- Programming Assignment 02 -->
       <p>2. Write a defining table and then a program that determines if you can sleep in or not. Your program should get all its input from your computer’s clock. On all weekdays (Monday through Friday) that are not holidays, your program should output “Get up!” On all other days (weekends and holidays) your program should output “Sleep in.” The three holidays that your program must check for are January 1 (New Year’s Day), July 4 (U.S. Independence Day), and December 25 (Christmas). You don’t need to include other holidays in your program because most other holidays do not occur on a fixed day each year.</p>
@@ -165,15 +262,65 @@ if (!(x == 4 || y < 0))
      
      <p>If you use the above code, the variable month will hold 0 if the current month is January, 1 if February, and so on to 11 if December. The variable dayOfMonth will hold 1 for the first day of the month up to 28, 29, 30, or 31 for the last day of the month. The variable dayOfWeek will hold 0 if today is Sunday, 1 if today is Monday, and so on to 6 if today is Saturday.</p>
 <p>
+    <h3>Check your Date</h3>
     <div>
-        Please enter beginning odometer: <input type = 'text' id='b'><br>
-        Please enter ending odometer: <input type = 'text' id='e'><br>
-        Please enter gallons of gas: <input type = 'text' id='g'><br>
-        <div id='output'>&nbsp;</div>
-        <button type='button' onClick='mpg()'>Click to calculate mpg</button>
+        <div id="output2"></div>
+        <button type='button' onClick='checkDate()'>Check Date&lt;/button>
     </div>
 
 </p>
+    
+    ..........................................................................................................................<br>
+    
+    <div id="pa2">
+    &lt;!DOCTYPE html><br>
+&lt;html lang="en"><br>
+&lt;head><br>
+    &lt;meta charset="UTF-8"><br>
+    &lt;title>My First Program</title><br><br>
+    <ul>
+    &lt;script><br><ul>
+        function checkDate(){<br><br><ul>
+            
+            var now = new Date();<br>
+            var month = now.getMonth();<br>
+            var dayOfMonth = now.getDate();<br>
+            var dayOfWeek = now.getDay();<br><br>
+            
+            var m = "Get up!";<br><br>
+            
+            if (dayOfWeek == 6 || dayOfWeek == 0){<br><ul><ul>
+                    m = "Sleep in.";<br></ul>
+                }<br><br></ul>
+                
+            else if(dayOfMonth == 1 || month == 0){<br><ul><ul>
+                    m = "Sleep in.";<br></ul>
+                }<br><br></ul>
+            
+            else if(dayOfMonth == 4 || month == 6){<br><ul><ul>
+                    m = "Sleep in.";<br></ul>
+                }<br><br></ul>
+            
+            else if(dayOfMonth == 25 || month == 11){<br><ul><ul>
+                    m = "Sleep in.";<br></ul>
+                }<br><br></ul>
+            
+            document.getElementById('output').innerHTML = m;<br>
+}<br></ul></ul>
+    &lt;/script><br></ul>
+&lt;/head><br><br>
+
+&lt;body><br><ul>
+    &lt;div><br>
+        &lt;div id="output">&lt;/div><br>
+        &lt;button type='button' onClick='checkDate()'>Check Date&lt;/button><br>
+    &lt;/div><br></ul>
+&lt;/body>  <br>     
+&lt;/html><br>
+    
+  </div>   ..........................................................................................................................<br>
+    
+    
 ***************************************************************
 
   </main>

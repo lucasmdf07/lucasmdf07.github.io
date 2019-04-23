@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="favicon.ico">
+  <title>Chapter 09</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="your name here">
+  <meta name="description" content="Describe your web site here"><style type="text/css">
+     ul {
+         list-style-type: none;
+     }
+               #pa1{
+         background-color: yellow;
+     }
+                    #pa2{
+         background-color: yellow;
+     }
+</style>
+     
+<script>
+/* Defining Table
+ * Input: A person's name
+ * Processing: Create a greeting for that person
+ * Output: The greeting
+ */
+/**********************
+Programming Assignment 1
+***********************/
+
+
+            
+ function sumOfOdds(){
+            
+            var sum = 0;
+            
+            var number = parseInt(document.getElementById('n').value);
+                        
+            for(var i = 0; i <= number; i++){
+                if (i%2 != 0)
+                    sum += i;
+                //document.write(sum + " ");
+                }
+                
+            document.getElementById('output').innerHTML = sum;
+            }       
+    
+function displayDay(){
+    var day = new Date().getDay();
+    var displayDayOfTheWeek = 0;
+    
+        if (day== 0){
+        displayDayOfTheWeek = "Sunday";
+    }
+        else if (day== 1){
+        displayDayOfTheWeek = "Monday";
+    }
+        else if (day== 2){
+        displayDayOfTheWeek = "Tuesday (Discount Day!!!)";
+    }
+        else if (day== 3){
+        displayDayOfTheWeek = "Wednesday (Discount Day!!!)";
+    }
+        else if (day== 4){
+        displayDayOfTheWeek = "Thursday";
+    }
+        else if (day== 5){
+        displayDayOfTheWeek = "Friday";
+    }
+        else if (day== 6){
+        displayDayOfTheWeek = "Saturday";
+    }
+    
+    document.getElementById('messageDay').innerHTML = displayDayOfTheWeek;
+}
+         
+/**********************
+Programming Assignment 2
+***********************/
+        function definingTable(){
+            
+            var output = "";
+            
+            for(var i = 1; i <= 12; i++){
+                
+            output += "5 x " + i + " = " + (i * 5) + "<br>";
+            
+            }
+                
+            document.getElementById('output2').innerHTML = output;
+            }     
+/**********************
+Programming Assignment 3
+***********************/
+        function definingTable2(){
+            
+            var output = "";
+            
+            for(var i = 0; i < 32; i++){
+                
+            output += Math.pow(2, i);
+            if(i!=31){
+                output += ", "
+            }
+            }
+                
+            document.getElementById('output3').innerHTML = output;
+            }       
+/***********************************************************/
+    
+</script>
+     
+<!-- TAGS 
+     &lt; = < 
+     &gt; = >
+-->
+ </head>
+ <body>
+ <p><a href="../cit160.html">back</a></p>
+  <header>Chapter 09</header>
+  <nav></nav>
+  <main>
+   <h1></h1>      
+   <h2>Review Questions</h2>
+
+<!-- Question 01 -->
+      <p>1. Consider these three terms: function, module, and program. Order them from largest (#1) to smallest (#3).</p>
+      <p><b>(2) module <br>
+          (3) function <br>
+          (1) function <br>
+      </b></p>
+
+<!-- Question 02 -->
+      <p>2. Which of the following are advantages of writing JavaScript statements inside a function instead of writing statements outside of all functions?</p>
+
+      <p><b>(X) Better organization</b><br>
+      ( &nbsp; ) All variables declared inside a function have global scope.<br>
+      <b>(X) Code reuse</b><br>
+      ( &nbsp; ) All statements written inside a function are executed at the time the HTML document is loaded into the browser.<br>
+      </p>
+      
+
+<!-- Question 03 -->
+      <p>3. What is the JavaScript keyword that begins a function header?</p>
+      <p><b>Answer: function</b></p>
+
+      
+<!-- Question 04 -->     
+      <p>4. Write the header for a function named computeFutureValue which takes as parameters three numbers named principal, annualRate, and years.</p>
+      <p><b>
+Answer:	function computeFutureValue(principal, annualRate, years) {	</b></p>
+      
+
+<!-- Question 05 -->     
+      <p>5. Write the header for a function named coneVolume which takes as parameters a radius and a height.</p>
+      <p><b>
+Answer:	function coneVolume(radius, height) {	
+	</b></p>
+      
+      
+<!-- Question 06 -->     
+      <p>6. Within a function header, for example:<br>
+      <ul><b>  function gcd(a, b) {</b></ul><br>
+         the text that appears within parentheses is called what?<br>      
+      </p>
+      
+      
+      
+            <ul>
+<form action="">
+  <input type="radio" name="gender" value="male"> variables<br>
+  <input type="radio" name="gender" value="other"> attributes<br>
+  <input type="radio" name="gender" value="female"> <b>	
+parameters</b><br>
+    <input type="radio" name="gender" value="male"> 	
+arguments
+</form>
+          </ul> 
+      
+      
+<!-- Question 07 -->     
+      <p>4. Write the header for a function named computeFutureValue which takes as parameters three numbers named principal, annualRate, and years.</p>
+      <p><b>
+Answer:	function computeFutureValue(principal, annualRate, years) {	</b></p>
+      
+      
+<!-- Question 08 -->     
+      <p>4. Write the header for a function named computeFutureValue which takes as parameters three numbers named principal, annualRate, and years.</p>
+      <p><b>
+Answer:	function computeFutureValue(principal, annualRate, years) {	</b></p>
+      
+      
+<!-- Question 09 -->     
+      <p>4. Write the header for a function named computeFutureValue which takes as parameters three numbers named principal, annualRate, and years.</p>
+      <p><b>
+Answer:	function computeFutureValue(principal, annualRate, years) {	</b></p>
+      
+      
+<!-- Question 10 -->     
+      <p>4. Write the header for a function named computeFutureValue which takes as parameters three numbers named principal, annualRate, and years.</p>
+      <p><b>
+Answer:	function computeFutureValue(principal, annualRate, years) {	</b></p>
+      
+      
+<!-- Question 11 -->     
+      <p>4. Write the header for a function named computeFutureValue which takes as parameters three numbers named principal, annualRate, and years.</p>
+      <p><b>
+Answer:	function computeFutureValue(principal, annualRate, years) {	</b></p>
+
+***************************************************************
+
+<!-- Programming Assignments -->
+
+   <h2>Programming Assignments</h2>
+
+<!-- Programming Assignment 01 -->
+      <p>1. Write a defining table and a program that asks the user for an integer n and then outputs the sum of all the odd integers between 1 and n, inclusive. For example, if a user entered 10, your program would add 1 + 3 + 5 + 7 + 9 and output 25. If a user entered 11, your program would add 1 + 3 + 5 + 7 + 9 + 11 and output 36.</p>
+
+
+    <div>
+        <h3>Enter an Integer Number</h3>
+        
+        
+        <input type='text' id='n'><br>
+        <div id="output"></div>
+        <button type='button' onClick='sumOfOdds()'>Sum of Odds</button>
+    </div>
+
+..........................................................................................................................<br>
+  <div id="pa1">
+   
+      
+&lt;!DOCTYPE html><br>
+&lt;html lang="en"><br>
+&lt;head><br>
+    &lt;meta charset="UTF-8"><br>
+    &lt;title>My First Program</title><br>
+    <ul>
+    &lt;script><br><ul>
+        function sumOfOdds(){<br><br>
+            
+            var sum = 0;<br><br>
+            
+            var number = parseInt(document.getElementById('n').value);<br><br>
+                        
+            for(var i = 0; i <= number; i++){<br><ul>
+                if (i%2 != 0)<br><ul>
+                    sum += i;<br></ul>
+                //document.write(sum + " ");<br>
+                }<br><br></ul>
+                
+            document.getElementById('output').innerHTML = sum;<br>
+            }       <br></ul>
+    &lt;/script><br></ul>
+&lt;/head><br><br>
+
+&lt;body><br><ul>
+    &lt;div><br><ul>
+        &lt;h2>Enter an Integer Number</h2><br><br>
+        
+        
+        &lt;input type='text' id='n'><br>
+        &lt;div id="output">&lt;/div><br>
+        &lt;button type='button' onClick='sumOfOdds()'>Sum of Odds&lt;/button><br></ul>
+    &lt;/div><br></ul>
+&lt;/body>     <br>  
+&lt;/html><br>
+
+ </div>
+     ..........................................................................................................................<br>
+
+      
+***************************************************************
+<!-- Programming Assignment 02 -->
+      <p>2. Write a defining table and a program to print the five times table from 1 to 12 in this format:<br>
+5 x 1 = 5<br>
+5 x 2 = 10<br>
+…<br>
+5 x 12 = 60<br></p>
+     
+    <div>
+        <h3>Defining table</h3>
+
+        <div id="output2"></div>
+        <button type='button' onClick='definingTable()'>Defining table</button>
+    </div>
+
+</p>
+    
+    ..........................................................................................................................<br>
+    
+    <div id="pa2">
+&lt;!DOCTYPE html><br>
+&lt;html lang="en"><br>
+&lt;head><br>
+    &lt;meta charset="UTF-8"><br>
+    &lt;title>My First Program</title><br><br>
+    <ul>
+    &lt;script><br><ul>
+        function definingTable(){<br><br><ul>
+            
+            var output = "";<br><br>
+            
+            for(var i = 1; i <= 12; i++){<br><br>
+                
+            output += "5 x " + i + " = " + (i * 5) + "&lt;br>";<br><br>
+            
+            }<br><br>
+                </ul>
+            document.getElementById('output').innerHTML = output;<br>
+            }       <br></ul>
+    &lt;/script><br></ul>
+&lt;/head><br><br>
+
+&lt;body><br><ul>
+    &lt;div><br>
+        &lt;div id="output">&lt;/div><br>
+        &lt;button type='button' onClick='definingTable()'>Defining table&lt;/button><br>
+    &lt;/div><br></ul>
+&lt;/body>   <br>    
+&lt;/html><br>
+    
+  </div>   ..........................................................................................................................<br>
+
+    
+    
+***************************************************************
+
+<!-- Programming Assignment 03 -->
+      <p>3. Write a defining table and a program to print all powers of 2 from 2<sup>0</sup> up to 2<sup>31</sup>, inclusive. In other words, your program should output this series: 1, 2, 4, 8, … 2147483648</p>
+     
+<div>
+        <h3>Defining table</h3>
+       
+        <div id="output3"></div>
+        <button type='button' onClick='definingTable2()'>Defining table</button>
+    </div>
+
+</p>
+    
+    ..........................................................................................................................<br>
+    
+    <div id="pa2">
+&lt;!DOCTYPE html><br>
+&lt;html lang="en"><br>
+&lt;head><br>
+    &lt;meta charset="UTF-8"><br>
+    &lt;title>My First Program&lt;/title><br><br>
+    <ul>
+    &lt;script><br><ul>
+        function definingTable(){<br><br><ul>
+            
+            var output = "";<br><br>
+            
+            for(var i = 0; i < 32; i++){<br><br>
+                
+            output += Math.pow(2, i);<br>
+            if(i!=31){<br><ul>
+                output += ", "<br></ul>
+            }<br>
+            }<br><br>
+                </ul>
+            document.getElementById('output').innerHTML = output;<br>
+            }       <br></ul>
+    &lt;/script><br></ul>
+&lt;/head><br><br>
+
+&lt;body><br><ul>
+    &lt;div><br>
+
+        &lt;div id="output">&lt;/div><br>
+        &lt;button type='button' onClick='definingTable()'>Defining table&lt;/button><br>
+    &lt;/div><br></ul>
+&lt;/body>      <br> 
+&lt;/html><br>
+    
+  </div>   ..........................................................................................................................<br>
+
+    
+    
+***************************************************************
+
+
+  </main>
+  <footer>
+   <p>&copy; Lucas Mayer de Freitas, (05/05/2018)</p>
+  </footer>
+ </body>
+</html>

@@ -10,26 +10,45 @@
      ul {
          list-style-type: none;
      }
+     
+     #pa1{
+         background-color: yellow;
+     }
+     
+     #pa2{
+         background-color: yellow;
+     }
+
+     
 </style>
      
 <script>
 /* Defining Table
- * Input: A person's name
- * Processing: Create a greeting for that person
- * Output: The greeting
+ * Input: foot wear value
+ * Processing: Choose shoes
+ * Output: Display right shoes
  */
 /**********************
 Programming Assignment 1
 ***********************/
 
-    function computeSize(){
-        var quarters = document.getElementById('quarters').value;
-        
-        quarters = parseFloat(quarters);
+    function login(){
+        var f = document.getElementById('footWear').value;
+
+            var m = "shoes";
+
+            if(f == 'hot' ){
+                   m = "sandals";
+               }
             
-        liters = quarters * 0.946353;
-                
-        document.getElementById('response').innerHTML = liters;
+            else if(f == 'rain' ){
+                   m = "galoshes";
+               }
+            else if (f == 'snow' ){
+                   m = "boots";
+               }   
+                        
+            document.getElementById('outputPa1').innerHTML = m;
                 
     }
          
@@ -37,24 +56,48 @@ Programming Assignment 1
 Programming Assignment 2
 ***********************/
         /*
-        input: beg odo, end odo, gallons
-        processing:calculate mpg
-        output: mpg
+        input: numbers and operations
+        processing: calculate
+        output: display message
         */
         
-        function mpg(){
+        function calculate(){
             
-        var b = parseFloat(document.getElementById('b').value);
-        
-        var e = parseFloat(document.getElementById('e').value);
+            var firstN = parseFloat(document.getElementById("firstNumber").value);
+            var oper = document.getElementById("operator").value;
+            var secondN = parseFloat(document.getElementById("secondNumber").value);
+            var userA = parseFloat(document.getElementById("userAsnwer").value);
             
-        var g = parseFloat(document.getElementById('g').value);
-        
-        var m = (e-b)/g;
-        
-        document.getElementById('output').innerHTML = m;
-                        
-        }         
+                message = "Incorrect. Try again.";
+
+            if(oper == "+" ){
+               if(userA == firstN + secondN){
+                   message = "Correct! Good job.";
+               }
+            }
+
+            else if(oper == "-" ){
+               if(userA == firstN - secondN){
+                   message = "Correct! Good job.";
+               }
+            }
+            
+            else if(oper == "*" ){
+               if(userA == firstN * secondN ){
+                   message = "Correct! Good job.";
+               }
+            }
+            
+            else if(oper == "/" ){
+               if(userA == firstN / secondN){
+                   message = "Correct! Good job.";
+               }
+            } 
+            
+            
+            
+            document.getElementById('outputPa2').innerHTML = message;
+}     
 /**********************
 Programming Assignment 3
 ***********************/
@@ -174,27 +217,167 @@ Programming Assignment 3
 
 <!-- Programming Assignment 01 -->
       <p>1. Write a defining table and a program that helps a user choose the correct foot wear for the day’s weather. The following table shows the weather types the user may enter and what your program should output.</p>
-
-<h3>How Many Square Feet?</h3>
-<p>
-    Quarters <input type="text" id="quarters"><br>
+    <ul>
+    <table>
+        <tr>
+            <td><b>Weather</b></td>
+            <td><b>Foot Wear</b></td>
+        </tr>
+        
+        <tr>
+            <td>hot</td>
+            <td>sandals</td>
+        </tr>
+        
+        <tr>
+            <td>rain</td>
+            <td>galoshes</td>
+        </tr>
+        
+        <tr>
+            <td>snow</td>
+            <td>boots</td>
+        </tr>
+    </table>
+    </ul>
     
-    <button type='button' onClick='computeSize()'>Compute Size</button><br>
-    Liters <div id="response"></div>
-</p>
+    <p>If the user enters any other weather type, your program should output "shoes".</p>
+    
+        <div>
+        <input type='text' id='footWear'><br>
+        <div id="outputPa1"></div>
+        <button type='button' onClick='login()'>Click here to check the foot wear</button>
+    </div>
+    <br>
+    ..........................................................................................................................<br>
+    <div id="pa1">    
+&lt;!DOCTYPE html><br>
+&lt;html lang="en"><br>
+&lt;head><br>
+&lt;meta charset="UTF-8"><br>
+&lt;title>My First Program &lt;/title><br>
+
+    <ul>
+    &lt;script><br>
+        <ul>
+        function login(){<br><br>
+            
+            var f = document.getElementById('footWear').value;<br>
+
+            var m = "shoes";<br><br>
+
+            if(f == 'hot' ){<br>
+            <ul>
+                   m = "sandals";<br>
+               </ul>}<br><br>
+            
+            else if(f == 'rain' ){<br>
+            <ul>
+                   m = "galoshes";<br>
+               </ul>}<br>
+            else if (f == 'snow' ){<br>
+            <ul>
+                   m = "boots";<br>
+               </ul>}   <br><br>
+                        
+            document.getElementById('output').innerHTML = m;<br><br>
+}<br>
+            </ul>
+    &lt;/script><br>
+   </ul>
+
+&lt;head><br><br>
+
+&lt;body><br><ul>
+    &lt;div><br><ul>
+        &lt;input type='text' id='footWear'><br>
+        &lt;div id="output">&lt;/div><br>
+        &lt;button type='button' onClick='login()'>Click here to check the foot wear</button><br></ul>
+    &lt;/div><br></ul>
+&lt;/body>       <br>
+&lt;/html><br>
+</div>
+..........................................................................................................................<br>
+    
 ***************************************************************
 <!-- Programming Assignment 02 -->
-      <p>2. Write a defining table and a JavaScript program to compute the mileage of a vehicle. Your program should allow the user to enter the beginning and ending odometer readings and the number of gallons of gasoline used and should output the mileage in miles per gallon. Your program should correctly handle real numbers such as 7.54.</p>
+      <p>2. Write a defining table and a program to quiz a child on simple arithmetic. The program should allow a child to enter a number, an arithmetic operator (+, -, *, or /), another number, and the child’s answer to the problem. The program should compute the correct answer and compare it to the child’s answer and output "Correct! Good job." or "Incorrect. Try again!". The user interface for your program should look similar to figure 6-9.</p>
+    
+    <p><img src='6-9.PNG'</p>
 <p>
     <div>
-        Please enter beginning odometer: <input type = 'text' id='b'><br>
-        Please enter ending odometer: <input type = 'text' id='e'><br>
-        Please enter gallons of gas: <input type = 'text' id='g'><br>
-        <div id='output'>&nbsp;</div>
-        <button type='button' onClick='mpg()'>Click to calculate mpg</button>
+        <input type='text' id='firstNumber'>
+        <input type='text' id='operator' size='1'>
+        <input type='text' id='secondNumber'> =
+        <input type='text' id='userAsnwer'><br>
+        <div id="outputPa2"></div>
+        <button type='button' onClick='calculate()'>calculate&lt;/button>
     </div>
 
 </p>
+..........................................................................................................................<br>
+<div id="pa2">
+&lt;!DOCTYPE html><br>
+&lt;html lang="en"><br>
+&lt;head><br>
+    &lt;meta charset="UTF-8"><br>
+    &lt;title>My First Program</title><br>
+<ul>    &lt;script><br>
+<ul>
+    function calculate(){<br><ul>
+            
+            var firstN = parseFloat(document.getElementById("firstNumber").value);<br>
+            var oper = document.getElementById("operator").value;<br>
+            var secondN = parseFloat(document.getElementById("secondNumber").value);<br>
+            var userA = parseFloat(document.getElementById("userAsnwer").value);<br><br>
+            
+                m = "Incorrect. Try again.";<br><br>
+
+    if(oper == "+" ){<br><ul>
+    if(userA == firstN + secondN){<br><ul>
+                   m = "Correct! Good job.";<br></ul>
+               }<br></ul>
+            }<br><br>
+
+            else if(oper == "-" ){<br><ul>
+               if(userA == firstN - secondN){<br><ul>
+                   m = "Correct! Good job.";<br></ul>
+    }<br></ul>
+            }<br><br>
+            
+            else if(oper == "*" ){<br><ul>
+               if(userA == firstN * secondN ){<br><ul>
+    m = "Correct! Good job.";<br></ul>
+               }<br></ul>
+            }<br><br>
+            
+            else if(oper == "/" ){<br><ul>
+               if(userA == firstN / secondN){<br><ul>
+    m = "Correct! Good job.";<br></ul>
+               }<br></ul>
+            }<br><br> 
+            
+            
+            
+            document.getElementById('output').innerHTML = m;<br></ul>
+}<br></ul>
+    &lt;/script><br></ul>
+&lt;/head><br><br>
+
+&lt;body><br><ul>
+    &lt;div><br><ul>
+        &lt;input type='text' id='firstNumber'><br>
+        &lt;input type='text' id='operator'><br>
+        &lt;input type='text' id='secondNumber'> =<br>
+        &lt;input type='text' id='userAsnwer'><br>
+        &lt;div id="output">&lt;/div><br>
+        &lt;button type='button' onClick='calculate()'>calculate&lt;/button><br></ul>
+    &lt;/div><br></ul>
+&lt;/body><br>       
+&lt;/html><br>
+</div>
+..........................................................................................................................<br>
+
 ***************************************************************
 
   </main>
