@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="favicon.ico">
+  <title>Chapter 07</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="your name here">
+  <meta name="description" content="Describe your web site here"><style type="text/css">
+     ul {
+         list-style-type: none;
+     }
+</style>
+     
+<script>
+/* Defining Table
+ * Input: A person's name
+ * Processing: Create a greeting for that person
+ * Output: The greeting
+ */
+/**********************
+Programming Assignment 1
+***********************/
+
+    function computeSize(){
+        var quarters = document.getElementById('quarters').value;
+        
+        quarters = parseFloat(quarters);
+            
+        liters = quarters * 0.946353;
+                
+        document.getElementById('response').innerHTML = liters;
+                
+    }
+         
+/**********************
+Programming Assignment 2
+***********************/
+        /*
+        input: beg odo, end odo, gallons
+        processing:calculate mpg
+        output: mpg
+        */
+        
+        function mpg(){
+            
+        var b = parseFloat(document.getElementById('b').value);
+        
+        var e = parseFloat(document.getElementById('e').value);
+            
+        var g = parseFloat(document.getElementById('g').value);
+        
+        var m = (e-b)/g;
+        
+        document.getElementById('output').innerHTML = m;
+                        
+        }         
+/**********************
+Programming Assignment 3
+***********************/
+   
+/***********************************************************/
+    
+</script>
+     
+<!-- TAGS 
+     &lt; = < 
+     &gt; = >
+-->
+ </head>
+ <body>
+ <p><a href="../cit160.html">back</a></p>
+  <header>Chapter 07</header>
+  <nav></nav>
+  <main>
+   <h1></h1>      
+   <h2>Review Questions</h2>
+
+<!-- Question 01 -->
+      <p>1. The following if statement contains a logic error, not a syntax error. Rewrite it so that it is correct. Assume the variable age already exists and holds a valid number.</p>
+      <ul>
+          <li>if (18 < age < 30) {</li>
+          <li><b>Answer: if (18 < age && age < 30) {	
+	</b></li>
+     </ul>
+
+<!-- Question 02 -->
+      <p>2. The following if statement contains a logic error, not a syntax error. Rewrite it so that it is correct. Assume the variable age already exists and holds a valid number.</p>
+      <ul>
+          <li>if (18 < age || age < 30) {</li>
+          <li><b>Answer: if (18 < age && age < 30) {</b></li>
+     </ul>
+
+<!-- Question 03 -->
+      <p>3. The following if statement contains a logic error, not a syntax error. Rewrite it so that it is correct. Assume the variable age already exists and holds a valid number.</p>
+      <ul>
+          <li>if (age == 18 && age == 19) { {</li>
+          <li><b>Answer: if (age == 18 || age == 19) {	
+</b></li>
+     </ul>
+      
+<!-- Question 04 -->     
+      <p>4. After the following code executes, what value will the variable result hold?</p>
+      <ul>
+          <li>var x = 2, y = 6, z = 5;</li>
+          <li>var result = (x < 3 && (y < 7 ^ z != 3))</li>
+          <li><b>false</b></li>
+      </ul>
+      
+<!-- Question 05 -->
+      <p>5. Use DeMorgan’s law:  Not (a Or b) <=> Not a And Not b
+to rewrite and simplify this if statement</p>
+      <ul>
+          <li>if (!(x == 4 || y < 0))</li>
+      </ul>
+      <p>Which of the following is correct?</p>
+      
+      <ul>
+<form action="">
+  <input type="radio" name="gender" value="male"> if (x == 4 && y < 0)<br>
+  <input type="radio" name="gender" value="female"> <b>	
+if (x != 4 && y >= 0)</b><br>
+  <input type="radio" name="gender" value="other"> if (x != 4 || y > 0)<br>
+    <input type="radio" name="gender" value="male"> 	
+if (!(x == 4 || y < 0))
+</form>
+          </form></ul> 
+
+
+
+***************************************************************
+
+<!-- Programming Assignments -->
+
+   <h2>Programming Assignments</h2>
+
+<!-- Programming Assignment 01 -->
+      <p>1. You work for a retail store that wants to increase sales on Tuesday and Wednesday which are the store’s slowest sales days. Write a defining table and then a program that takes a customer’s subtotal as input and if the subtotal is greater than $50 and today is Tuesday or Wednesday, subtracts 10% from the subtotal. Your program should then compute and output the total amount due by adding sales tax of 6% to the subtotal. Within your program, use this JavaScript code that will get the current day of the week from your computer’s clock:</p>
+      
+      <ul>
+          var dayOfWeek = new Date().getDay();
+      </ul>
+      
+      <p>If you use the above code, the variable dayOfWeek will hold 0 if today is Sunday, 1 if today is Monday, and so on to 6 if today is Saturday.</p>
+
+<h3>How Many Square Feet?</h3>
+<p>
+    Quarters <input type="text" id="quarters"><br>
+    
+    <button type='button' onClick='computeSize()'>Compute Size</button><br>
+    Liters <div id="response"></div>
+</p>
+***************************************************************
+<!-- Programming Assignment 02 -->
+      <p>2. Write a defining table and then a program that determines if you can sleep in or not. Your program should get all its input from your computer’s clock. On all weekdays (Monday through Friday) that are not holidays, your program should output “Get up!” On all other days (weekends and holidays) your program should output “Sleep in.” The three holidays that your program must check for are January 1 (New Year’s Day), July 4 (U.S. Independence Day), and December 25 (Christmas). You don’t need to include other holidays in your program because most other holidays do not occur on a fixed day each year.</p>
+     <p>Within your program, use this JavaScript code that will get the current month, current day of the month, and current day of the week from your computer’s clock:</p>
+     
+     <ul>
+         <li>var now = new Date();</li>
+         <li>var month = now.getMonth();</li>
+         <li>var dayOfMonth = now.getDate();</li>
+         <li>var dayOfWeek = now.getDay();</li>
+         
+     </ul>
+     
+     <p>If you use the above code, the variable month will hold 0 if the current month is January, 1 if February, and so on to 11 if December. The variable dayOfMonth will hold 1 for the first day of the month up to 28, 29, 30, or 31 for the last day of the month. The variable dayOfWeek will hold 0 if today is Sunday, 1 if today is Monday, and so on to 6 if today is Saturday.</p>
+<p>
+    <div>
+        Please enter beginning odometer: <input type = 'text' id='b'><br>
+        Please enter ending odometer: <input type = 'text' id='e'><br>
+        Please enter gallons of gas: <input type = 'text' id='g'><br>
+        <div id='output'>&nbsp;</div>
+        <button type='button' onClick='mpg()'>Click to calculate mpg</button>
+    </div>
+
+</p>
+***************************************************************
+
+  </main>
+  <footer>
+   <p>&copy; Lucas Mayer de Freitas, (05/05/2018)</p>
+  </footer>
+ </body>
+</html>
