@@ -179,33 +179,67 @@ arguments
       
       
 <!-- Question 07 -->     
-      <p>4. Write the header for a function named computeFutureValue which takes as parameters three numbers named principal, annualRate, and years.</p>
-      <p><b>
-Answer:	function computeFutureValue(principal, annualRate, years) {	</b></p>
+      <p>7. Within a function call, for example:<br>
+      <ul><b>  var g = gcd(142, b);</b></ul><br>
+         the text that appears within parentheses is called what?<br>      
+      </p>
+      
+      
+      
+            <ul>
+<form action="">
+  <input type="radio" name="gender" value="male"> variables<br>
+  <input type="radio" name="gender" value="other"> attributes<br>
+  <input type="radio" name="gender" value="female">	
+parameters<br>
+    <input type="radio" name="gender" value="male"> 	
+    <b>arguments</b>
+</form>
+          </ul> 
       
       
 <!-- Question 08 -->     
-      <p>4. Write the header for a function named computeFutureValue which takes as parameters three numbers named principal, annualRate, and years.</p>
-      <p><b>
-Answer:	function computeFutureValue(principal, annualRate, years) {	</b></p>
+      <p>8. Given this function header:<br><ul>
+function compute(x, y, z) {</ul>
+
+and this code to call that function:<br><ul>
+var x = 7;<br>
+var result = compute(3, 2, x);</ul>
+
+Within the function compute, what value will be stored in the parameter x?</p>
+    <ul><p><b>Answer: 3</b></p></ul>
       
       
 <!-- Question 09 -->     
-      <p>4. Write the header for a function named computeFutureValue which takes as parameters three numbers named principal, annualRate, and years.</p>
-      <p><b>
-Answer:	function computeFutureValue(principal, annualRate, years) {	</b></p>
+      <p>9. Assume that a function with this header:
+<ul>
+function addOrder(name, amount)
+    </ul>
+already exists. Write a single line of JavaScript code to call that function.
+<ul>
+<b>Answer:	addOrder("name", 10);	
+</b></ul></p>
       
       
 <!-- Question 10 -->     
-      <p>4. Write the header for a function named computeFutureValue which takes as parameters three numbers named principal, annualRate, and years.</p>
-      <p><b>
-Answer:	function computeFutureValue(principal, annualRate, years) {	</b></p>
+      <p>10. Assume that a function with this header:
+<ul>
+function isPrime(value)
+</ul>
+    already exists. Write a single line of JavaScript code to call that function and assign the result returned from that function to a variable named p.
+<ul><b>
+Answer:	var p = isPrime(value)	
+</b></ul></p>
       
       
 <!-- Question 11 -->     
-      <p>4. Write the header for a function named computeFutureValue which takes as parameters three numbers named principal, annualRate, and years.</p>
-      <p><b>
-Answer:	function computeFutureValue(principal, annualRate, years) {	</b></p>
+      <p>11. Within a function, what does the keyword return do? (Select all that apply)</p>
+      <p>
+          &#10004;cause the computer to stop executing the current function<br>
+          &#10004;return a value to the call point<br>
+          &#10005; display a value for a user to see<br>
+          &#10004;cause the computer to resume executing code after the call point<br>
+</p>
 
 ***************************************************************
 
@@ -214,7 +248,36 @@ Answer:	function computeFutureValue(principal, annualRate, years) {	</b></p>
    <h2>Programming Assignments</h2>
 
 <!-- Programming Assignment 01 -->
-      <p>1. Write a defining table and a program that asks the user for an integer n and then outputs the sum of all the odd integers between 1 and n, inclusive. For example, if a user entered 10, your program would add 1 + 3 + 5 + 7 + 9 and output 25. If a user entered 11, your program would add 1 + 3 + 5 + 7 + 9 + 11 and output 36.</p>
+      <p>1. Create an HTML document which contains two text fields, a button, and a div. The first text field should be labeled “Temperature”, and the second should be labeled “Wind Speed”. The button should have the text “Wind Chill” written on it. Write two functions with these headers:</p>
+    <ul>
+        function doInputOutput()
+        function windChill(tempF, speed)
+    </ul>
+<p>The first function (doInputOutput) must be called from the onclick attribute of the button and must do the following:</p>
+<ul>
+    <li>a. get a temperature from the first text field</li>
+    <li>b. get a wind speed from the second text field</li>
+    <li>c. call the second function (windChill)</li>
+    <li>d. store the value returned by windChill in a variable</li>
+    <li>e. output the value returned by windChill to the div for the user to see</li>
+</ul>
+<p>The second function (windChill) must</p>
+<ul>
+    <li>a. take a temperature in Fahrenheit as a parameter</li>
+    <li>b. take a wind speed in miles per hour as a parameter</li>
+    <li>c. calculate the wind chill factor as a temperature in Fahrenheit</li>
+    <li>d. return the wind chill factor in Fahrenheit</li>
+</ul>
+
+<p>
+    In other words, the second function (windChill) must not gather any input from a user and must not output anything for a user to see. Instead it must calculate and return the result which makes this second function very reusable in other projects.
+</p>
+
+<p>The formula for computing the wind chill factor is</p>
+
+<ul><b>f = 35.74 + 0.6215 t - 35.75 s0.16 + 0.4275 t s0.16</b></ul>
+
+<p>where f is the wind chill factor in Fahrenheit, t is the air temperature in Fahrenheit, and s is the wind speed in miles per hour at five feet above the ground..</p>
 
 
     <div>
