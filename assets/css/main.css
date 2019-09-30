@@ -1,11 +1,5 @@
 @import url(fontawesome-all.min.css);
 
-/*
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -23,6 +17,8 @@ section, summary, time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;}
+
+	
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -69,6 +65,12 @@ input, select, textarea {
 	-webkit-appearance: none;
 	-ms-appearance: none;
 	appearance: none;
+}
+
+@media screen and (min-width: 1280px) {
+#lucas2{
+	display: none;
+}
 }
 
 /* Basic */
@@ -3801,6 +3803,7 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 1280px) {
+			
 
 			#sidebar {
 				height: 3.5em;
@@ -3847,6 +3850,10 @@ input, select, textarea {
 							line-height: inherit;
 							margin: 0 0 0 2em;
 							padding: 0;
+						}
+
+						#lucas{
+							display: none;
 						}
 
 					#sidebar nav a {
@@ -3901,6 +3908,7 @@ input, select, textarea {
 			}
 
 		@media screen and (max-width: 1280px) {
+
 
 			#intro {
 				background-attachment: scroll;
